@@ -2,7 +2,7 @@ const net = require("net");
 const readline = require("readline");
 const connect = function () {
   const conn = net.createConnection({
-    host: "165.227.47.243",
+    host: "192.168.2.47",
     port: 50541
   });
 
@@ -12,6 +12,7 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: ABC");
+    conn.write("Move: up");
   });
   return conn;
 };
