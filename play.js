@@ -1,14 +1,6 @@
 const {connect}  = require("./client.js");
+const {setupInput} = require("./input.js");
 // establishes a connection with the game server
 
-
-console.log("Connecting ...");
-connect();
-
-module.exports = {
-  myNumber: 42,
-  myString: "hello",
-  myFunction: () => {
-    // myFunction's code
-  },
-};
+console.log("Connecting ...")
+setupInput(connect());
